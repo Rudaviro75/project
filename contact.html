@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Book High School, Cranborne, Harare</title>
+  <link rel="stylesheet" href="services.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a class="logo" href="index.html">Book High <span>School</span></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Contact Us</h1>
+    <p>We are a school of about 500 pupils in Cranborne, Harare, with a low teacher-pupil ratio, so every call and message is answered by someone who knows our pupils.</p>
+  </section>
+
+  <section class="container">
+    <h2 class="section-title">Who to call</h2>
+    <div class="grid">
+
+      <article class="card">
+        <h3>The Head</h3>
+        <p class="role">Admissions, school matters and general enquiries</p>
+        <p><a href="tel:+263712763518">+263 71 276 3518</a></p>
+        <p><a href="tel:+263774835657">+263 77 483 5657</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Mrs Chipango</h3>
+        <p class="role">Bursar: school fees and payments</p>
+        <p><a href="tel:+2637737904790">+263 773 79 04 790</a></p>
+      </article>
+
+      <article class="card">
+        <h3>Mr Samarai</h3>
+        <p class="role">Sports Director: teams, fixtures and training</p>
+        <p><a href="tel:+263786764608">+263 786 764 608</a></p>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="write-layout">
+
+      <div class="write-info">
+        <h2>Write to us</h2>
+        <p>Email us at <a href="mailto:bookhighschool@gmail.com">bookhighschool@gmail.com</a>, or use the form and your email app will open with the message ready to send.</p>
+        <p class="address"><strong>Find us</strong><br>Book High School<br>Cranborne, Harare<br>Zimbabwe</p>
+      </div>
+
+      <form class="form" action="mailto:bookhighschool@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="topic">Who is this for?</label>
+        <select id="topic" name="topic">
+          <option>The Head</option>
+          <option>Bursar</option>
+          <option>Sports Director</option>
+          <option>Something else</option>
+        </select>
+
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Send message</button>
+      </form>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Book High School, Cranborne, Harare</p>
+  </footer>
+
+</body>
+</html>
