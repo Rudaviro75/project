@@ -66,7 +66,7 @@
 
         /* Hero / Welcome Banner */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://unsplash.com') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1800&q=80') no-repeat center center/cover;
             color: var(--white);
             text-align: center;
             padding: 6rem 2rem;
@@ -80,7 +80,7 @@
 
         .hero .motto {
             font-style: italic;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--light-gray);
             margin-bottom: 1.5rem;
         }
@@ -113,6 +113,12 @@
             color: var(--black);
         }
 
+        /* Responsive tweaks */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .hero { padding: 4rem 1rem; }
+        }
+
         /* Footer */
         footer {
             text-align: center;
@@ -126,8 +132,8 @@
 </head>
 <body>
 
-    <!-- Fixed Shared Navigation Bar -->
-    <nav>
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
         <div class="logo">Book High <span>School</span></div>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -137,35 +143,37 @@
     </nav>
 
     <!-- HOME SECTION CONTENT -->
-    <div id="home">
+    <main id="home">
         <header class="hero">
             <h1>Book High School</h1>
             <p class="motto">"Nitamur ad caelum" — Taking to the sky</p>
         </header>
 
-        <section class="container">
-            <h2>Welcome to Book High School</h2>
-            <p>Located in the eastern suburb of Cranborne, Harare, Book High School is a premier Government day school dedicated to fostering academic excellence, technical mastery, and sporting achievement.</p>
-            
-            <div class="features-grid">
-                <div class="feature-card">
+        <section class="container" aria-labelledby="welcome-heading">
+            <h2 id="welcome-heading">Welcome to Book High School</h2>
+            <p>Located in Cranborne, Harare, Book High School is a Government day school committed to academic excellence, technical education, and competitive athletics. We serve roughly 500 students across O-Level and A-Level classes with a focus on discipline, practical skills, and community.</p>
+
+            <div class="features-grid" role="list">
+                <article class="feature-card" role="listitem">
                     <h3>Academic Excellence</h3>
-                    <p>Offering comprehensive O-Level and Advanced Level blocks with an optimal, low teacher-to-pupil ratio across approximately 500 students.</p>
-                </div>
-                <div class="feature-card">
+                    <p>Strong curricula from Form 1 to Form 6 with dedicated teachers and structured revision programs for ZIMSEC O-Level and A-Level examinations.</p>
+                </article>
+
+                <article class="feature-card" role="listitem">
                     <h3>Technical Foundations</h3>
-                    <p>Equipping students with modern, hands-on environments for Technical Graphics, Metal Work, Wood Work, and Art.</p>
-                </div>
-                <div class="feature-card">
-                    <h3>Elite Athletics</h3>
-                    <p>Proudly competing against top-tier institutions like Prince Edward, St John's, Churchill, and Allan Wilson in rugby, soccer, cricket, basketball, hockey, and swimming.</p>
-                </div>
+                    <p>Hands-on workshops in Technical Graphics, Metal Work, Wood Work, and Art to build practical competence and problem-solving skills.</p>
+                </article>
+
+                <article class="feature-card" role="listitem">
+                    <h3>Elite Athletics & Clubs</h3>
+                    <p>Competitive teams in rugby, soccer, cricket and more, plus clubs for debate, music, and environmental stewardship that develop leadership and teamwork.</p>
+                </article>
             </div>
         </section>
-    </div>
+    </main>
 
     <footer>
-        &copy; 2026 Book High School. All Rights Reserved. Built for School Project Collaboration.
+        &copy; 2026 Book High School. All rights reserved.
     </footer>
 
 </body>
