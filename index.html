@@ -11,12 +11,13 @@
             --black: #1A1A1A;
             --white: #FFFFFF;
             --light-gray: #F5F5F5;
+            --contact-height: 64px;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 0 0 var(--contact-height); /* leave space for fixed contact bar */
             color: var(--black);
             background-color: var(--white);
             line-height: 1.6;
@@ -66,7 +67,10 @@
 
         /* Hero / Welcome Banner */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1800&q=80') no-repeat center center / cover;
+            /* Prefer a local school-related image at assets/hero-school.jpg (for offline use). If not present, a high-school-related Unsplash image is used. */
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('assets/hero-school.jpg') no-repeat center center / cover;
+            /* fallback: neutral high-school image from Unsplash */
+            background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1621312449992-7d6f6ca4b2b7?auto=format&fit=crop&w=1800&q=80');
             color: var(--white);
             text-align: center;
             padding: 6rem 2rem;
@@ -113,12 +117,73 @@
             color: var(--black);
         }
 
+        /* Contact Bar (quick info visible on every page) */
+        .contact-bar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: var(--contact-height);
+            background: linear-gradient(90deg, var(--black), rgba(26,26,26,0.95));
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 0 1.25rem;
+            z-index: 1100;
+            box-shadow: 0 -4px 12px rgba(0,0,0,0.25);
+            font-size: 0.95rem;
+        }
+
+        .contact-left, .contact-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .contact-item .label {
+            font-size: 0.75rem;
+            color: #cccccc;
+        }
+
+        .contact-item a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-cta {
+            background: var(--red);
+            color: var(--white);
+            border: none;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
         /* Responsive tweaks */
-        @media (max-width: 600px) {
-            .hero h1 { font-size: 2rem; }
-            .hero { padding: 4rem 1rem; }
+        @media (max-width: 800px) {
+            .hero h1 { font-size: 2.2rem; }
+            .hero { padding: 5rem 1.25rem; }
             nav { padding: 0.75rem 1rem; }
             nav ul { gap: 1rem; }
+            .contact-bar { padding: 0 0.75rem; font-size: 0.9rem; }
+        }
+
+        @media (max-width: 480px) {
+            .contact-bar { height: auto; flex-direction: column; align-items: stretch; padding: 0.5rem; gap: 0.5rem; }
+            .contact-left, .contact-right { width: 100%; justify-content: space-between; }
+            body { padding-bottom: calc(var(--contact-height) + 20px); }
         }
 
         /* Footer */
@@ -147,7 +212,7 @@
 
     <!-- HOME SECTION CONTENT -->
     <main id="home">
-        <header class="hero">
+        <header class="hero" role="banner" aria-label="School hero">
             <h1>Book High School</h1>
             <p class="motto">"Nitamur ad caelum" — Taking to the sky</p>
         </header>
@@ -178,6 +243,36 @@
     <footer>
         &copy; 2026 Book High School. All rights reserved.
     </footer>
+
+    <!-- Quick contact bar visible on every page -->
+    <div class="contact-bar" role="contentinfo" aria-label="Quick contact information">
+        <div class="contact-left">
+            <div class="contact-item">
+                <span class="label">Phone</span>
+                <!-- Replace the numbers below with your real contact numbers -->
+                <a href="tel:+263712345678">+263 71 234 5678</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="label">Email</span>
+                <a href="mailto:info@bookhighschool.ac.zw">info@bookhighschool.ac.zw</a>
+            </div>
+
+            <div class="contact-item">
+                <span class="label">Address</span>
+                <span>Cranborne, Harare</span>
+            </div>
+        </div>
+
+        <div class="contact-right">
+            <div class="contact-item">
+                <span class="label">Office Hours</span>
+                <span>Mon–Fri 08:00–16:00</span>
+            </div>
+
+            <a class="contact-cta" href="tel:+263712345678">Call Now</a>
+        </div>
+    </div>
 
 </body>
 </html>
