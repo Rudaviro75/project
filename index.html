@@ -15,13 +15,17 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="About.html">About</a></li>
             <li><a href="services.html">Services</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="News and Events.html">News &amp; Events</a></li>
+            <li><a href="Gallery.html">Gallery</a></li>
+            <li><a href="Sports and Clubs.html">Sports &amp; Clubs</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <!-- HOME SECTION CONTENT -->
     <main id="home">
-        <header class="hero">
+        <header class="hero" id="homepage-hero">
             <h1>Book High School</h1>
             <p class="motto">"Nitamur ad caelum" — Taking to the sky</p>
         </header>
@@ -81,6 +85,50 @@
             <a class="contact-cta" href="tel:+263712345678">Call Now</a>
         </div>
     </div>
+
+
+<!-- Hero image picker script -->
+<script>
+  (function() {
+    const hero = document.getElementById('homepage-hero') || document.querySelector('.hero');
+    if (!hero) return;
+
+    const candidates = [
+      'assets/gallery/hero-1.jpg',
+      'assets/gallery/hero1.jpg',
+      'assets/gallery/photo1.jpg',
+      'assets/hero-school.jpg',
+      'assets/hero-school.svg',
+      'https://images.unsplash.com/photo-1621312449992-7d6f6ca4b2b7?auto=format&fit=crop&w=1800&q=80'
+    ];
+
+    function imageExists(url) {
+      return new Promise(resolve => {
+        const img = new Image();
+        img.onload = () => resolve(true);
+        img.onerror = () => resolve(false);
+        img.src = url + (url.indexOf('?') === -1 ? '?_v=' + Date.now() : '&_v=' + Date.now());
+      });
+    }
+
+    (async function pickHero() {
+      for (const p of candidates) {
+        try {
+          // eslint-disable-next-line no-await-in-loop
+          if (await imageExists(p)) {
+            hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("${p}")`;
+            hero.style.backgroundSize = 'cover';
+            hero.style.backgroundPosition = 'center';
+            return;
+          }
+        } catch (e) {
+          // ignore and try next
+        }
+      }
+      // no image found — leave existing CSS background
+    })();
+  })();
+</script>
 
 </body>
 </html>
