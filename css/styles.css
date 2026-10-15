@@ -17,10 +17,10 @@ html, body {
   line-height: 1.6;
 }
 
-/* Navigation */
+/* Shared Header / Navigation */
 nav {
   background-color: var(--black);
-  padding: 1rem 2rem;
+  padding: 0.85rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,24 +28,59 @@ nav {
   top: 0;
   z-index: 1000;
   border-bottom: 4px solid var(--red);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
-nav .logo { color: var(--white); font-size: 1.4rem; font-weight: bold; }
+nav .logo {
+  color: var(--white);
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
 nav .logo span { color: var(--red); }
-nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.5rem; }
-nav ul li a { color: var(--white); text-decoration: none; font-weight: 500; transition: color 0.3s; }
-nav ul li a:hover { color: var(--red); }
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.15rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.96rem;
+  transition: color 0.25s ease, opacity 0.25s ease;
+  opacity: 0.9;
+}
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a.active {
+  color: var(--red);
+  opacity: 1;
+  outline: none;
+}
 
-/* Hero / Welcome Banner */
-/* Use a simple dark background so visitors see the school name clearly; images are available from the Gallery page */
+/* Hero */
 .hero {
   background-color: var(--black);
   color: var(--white);
   text-align: center;
-  padding: 6rem 2rem;
+  padding: 5.5rem 2rem;
   border-bottom: 5px solid var(--red);
 }
-.hero h1 { font-size: 3rem; margin-bottom: 0.5rem; letter-spacing: 1px; }
-.hero .motto { font-style: italic; font-size: 1.1rem; color: var(--light-gray); margin-bottom: 1.5rem; }
+.hero h1 {
+  font-size: clamp(2.3rem, 5vw, 4rem);
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+.hero .motto {
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--light-gray);
+  margin-bottom: 0;
+}
 
 /* Main container */
 .container { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
@@ -101,11 +136,22 @@ footer {
 }
 
 /* Responsive tweaks */
+@media (max-width: 900px) {
+  nav {
+    padding: 0.75rem 1rem;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+  nav ul {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 0.7rem 1rem;
+  }
+}
 @media (max-width: 800px) {
-  .hero h1 { font-size: 2.2rem; }
-  .hero { padding: 5rem 1.25rem; }
-  nav { padding: 0.75rem 1rem; }
-  nav ul { gap: 1rem; }
+  .hero h1 { font-size: 2.3rem; }
+  .hero { padding: 4.2rem 1.25rem; }
   .contact-bar { padding: 0 0.75rem; font-size:0.9rem; }
 }
 @media (max-width: 480px) {
