@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book High School | Home</title>
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Preload the hero placeholder image (will be overridden if a real gallery image exists) -->
+    <link rel="preload" as="image" href="assets/gallery/hero-1.svg">
 </head>
 <body>
 
     <!-- Navigation -->
-    <nav aria-label="Main navigation">
-        <div class="logo">Book High <span>School</span></div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="admissions.html">Admissions</a></li>
-            <li><a href="News and Events.html">News &amp; Events</a></li>
-            <li><a href="Gallery.html">Gallery</a></li>
-            <li><a href="Sports and Clubs.html">Sports &amp; Clubs</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div id="site-header" aria-hidden="false"></div>
+    <script>
+      (async function(){
+        const placeholder = document.getElementById('site-header');
+        if(!placeholder) return;
+        try{
+          const res = await fetch('header.html', {cache: 'no-store'});
+          if(res.ok){
+            placeholder.innerHTML = await res.text();
+          }
+        }catch(e){ /* ignore */ }
+      })();
+    </script>
 
     <!-- HOME SECTION CONTENT -->
     <main id="home">
@@ -94,10 +96,12 @@
     if (!hero) return;
 
     const candidates = [
+      'assets/gallery/hero-1.webp',
       'assets/gallery/hero-1.jpg',
       'assets/gallery/hero1.jpg',
       'assets/gallery/photo1.jpg',
       'assets/hero-school.jpg',
+      'assets/gallery/hero-1.svg',
       'assets/hero-school.svg',
       'https://images.unsplash.com/photo-1621312449992-7d6f6ca4b2b7?auto=format&fit=crop&w=1800&q=80'
     ];
@@ -114,7 +118,6 @@
     (async function pickHero() {
       for (const p of candidates) {
         try {
-          // eslint-disable-next-line no-await-in-loop
           if (await imageExists(p)) {
             hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("${p}")`;
             hero.style.backgroundSize = 'cover';

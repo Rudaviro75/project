@@ -3,25 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Admissions at Book High School in Cranborne, Harare. Form 1 to Form 6.">
   <title>Admissions | Book High School</title>
-  <link rel="stylesheet" href="services.css">
+  <link rel="stylesheet" href="css/services.css">
 </head>
 <body>
 
-  <header class="navbar">
-    <a class="logo" href="index.html">Book High <span>School</span></a>
-    <nav>
-       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-       <a href="admissions.html" class="active">Admissions</a>
-        <a href="Gallery.html">Gallery</a>
-         <a href="News and Events.html">News and Events</a>
-          <a href="Sports and Clubs.html">Sports and Clubs</a>
-           <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+  <div id="site-header"></div>
+  <script>
+    (async function(){
+      const p=document.getElementById('site-header'); if(!p) return; try{ const r=await fetch('header.html',{cache:'no-store'}); if(r.ok) p.innerHTML=await r.text(); }catch(e){}
+    })();
+  </script>
 
   <section class="hero">
     <h1>Admissions</h1>
@@ -47,164 +39,3 @@
     </div>
   </section>
 
-  <section class="container" id="apply">
-    <h2 class="section-title">How to Apply</h2>
-    <div class="grid">
-      <div class="card">
-        <span class="number">1</span>
-        <h3>Submit Enquiry</h3>
-        <p>Visit the school office or email bookhighschool@gmail.com to register your interest.</p>
-      </div>
-      <div class="card">
-        <span class="number">2</span>
-        <h3>Complete Application</h3>
-        <p>Submit the application form with the documents listed below.</p>
-      </div>
-      <div class="card">
-        <span class="number">3</span>
-        <h3>Placement Assessment</h3>
-        <p>Pupils write a short assessment in English and Mathematics.</p>
-      </div>
-      <div class="card">
-        <span class="number">4</span>
-        <h3>Interview</h3>
-        <p>A meeting with the Head and the admissions team.</p>
-      </div>
-      <div class="card">
-        <span class="number">5</span>
-        <h3>Offer Letter</h3>
-        <p>Successful applicants receive a formal offer from the school.</p>
-      </div>
-      <div class="card">
-        <span class="number">6</span>
-        <h3>Enrolment</h3>
-        <p>Pay fees at the bursar's office and confirm your place before term begins.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="container">
-    <h2 class="section-title">Entry Requirements</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>For all applicants</h3>
-        <ul>
-          <li>Completed application form</li>
-          <li>Birth certificate (certified copy)</li>
-          <li>Latest school report or transfer letter</li>
-          <li>Two passport-sized photographs</li>
-          <li>Copy of parent or guardian ID</li>
-          <li>Proof of residence</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Depending on the level</h3>
-        <ul>
-          <li>Grade 7 results slip (Form 1 entry)</li>
-          <li>O-Level results slip (A-Level entry)</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="container">
-    <h2 class="section-title">School Fees</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Form 1 – Form 2</h3>
-        <p>Term fee: $150</p>
-        <p>Annual fee: $450</p>
-      </div>
-      <div class="card">
-        <h3>Form 3 – Form 4 (O-Level)</h3>
-        <p>Term fee: $180</p>
-        <p>Annual fee: $540</p>
-      </div>
-      <div class="card">
-        <h3>Form 5 – Form 6 (A-Level)</h3>
-        <p>Term fee: $220</p>
-        <p>Annual fee: $660</p>
-      </div>
-      <div class="card">
-        <h3>Levies (per term)</h3>
-        <p>Sports levy: $30</p>
-        <p>Development levy: $25</p>
-      </div>
-    </div>
-    <p>Fees are paid at the bursar's office.</p>
-  </section>
-
-  <section class="container">
-    <h2 class="section-title">Important Dates</h2>
-    <div class="grid">
-      <div class="card">
-        <span class="number">1 Feb</span>
-        <h3>Applications open</h3>
-      </div>
-      <div class="card">
-        <span class="number">30 Apr</span>
-        <h3>Application deadline</h3>
-      </div>
-      <div class="card">
-        <span class="number">10 May</span>
-        <h3>Placement assessment</h3>
-      </div>
-      <div class="card">
-        <span class="number">15–25 May</span>
-        <h3>Interviews</h3>
-      </div>
-      <div class="card">
-        <span class="number">1 Jun</span>
-        <h3>Offer letters sent</h3>
-      </div>
-      <div class="card">
-        <span class="number">30 Jun</span>
-        <h3>Fee payment deadline</h3>
-      </div>
-    </div>
-  </section>
-
-  <section class="container">
-    <h2 class="section-title">Contact Admissions</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>The Head</h3>
-        <p><a href="tel:+263712763518">+263 71 276 3518</a></p>
-        <p><a href="tel:+263774835657">+263 77 483 5657</a></p>
-      </div>
-      <div class="card">
-        <h3>Bursar, Mrs Chipango</h3>
-        <p><a href="tel:+2637737904790">+263 773 79 04 790</a></p>
-      </div>
-      <div class="card">
-        <h3>Sports Director, Mr Samarai</h3>
-        <p><a href="tel:+263786764608">+263 786 764 608</a></p>
-      </div>
-      <div class="card">
-        <h3>Email</h3>
-        <p><a href="mailto:bookhighschool@gmail.com">bookhighschool@gmail.com</a></p>
-      </div>
-      <div class="card">
-        <h3>Address</h3>
-        <p>Cranborne, Harare, Zimbabwe</p>
-      </div>
-      <div class="card">
-        <h3>Enrolment</h3>
-        <p>About 500 pupils with a low teacher-pupil ratio.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <h2>Ready to apply?</h2>
-    <p>Get in touch and we will guide you through each step.</p>
-    <a href="contact.html" class="btn">Contact Us</a>
-    <a href="mailto:bookhighschool@gmail.com" class="btn">Email Admissions</a>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2026 Book High School, Cranborne, Harare</p>
-  </footer>
-
-</body>
-</html>
