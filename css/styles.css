@@ -36,15 +36,13 @@ nav ul li a { color: var(--white); text-decoration: none; font-weight: 500; tran
 nav ul li a:hover { color: var(--red); }
 
 /* Hero / Welcome Banner */
-/* Prefer a local image at assets/hero-school.svg (SVG) or assets/hero-school.jpg; fallback to Unsplash */
+/* Use a simple dark background so visitors see the school name clearly; images are available from the Gallery page */
 .hero {
-  /* overlay + fallback image (original SVG or Unsplash) — script will override if it finds a gallery image */
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('assets/hero-school.svg') no-repeat center center / cover;
+  background-color: var(--black);
   color: var(--white);
   text-align: center;
   padding: 6rem 2rem;
-  background-size: cover;
-  background-position: center;
+  border-bottom: 5px solid var(--red);
 }
 .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; letter-spacing: 1px; }
 .hero .motto { font-style: italic; font-size: 1.1rem; color: var(--light-gray); margin-bottom: 1.5rem; }

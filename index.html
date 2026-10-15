@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book High School | Home</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Preload the hero placeholder image (will be overridden if a real gallery image exists) -->
-    <link rel="preload" as="image" href="assets/gallery/hero-1.svg">
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Navigation (loaded from shared header.html) -->
     <div id="site-header" aria-hidden="false"></div>
     <script>
       (async function(){
@@ -87,51 +85,6 @@
             <a class="contact-cta" href="tel:+263712345678">Call Now</a>
         </div>
     </div>
-
-
-<!-- Hero image picker script -->
-<script>
-  (function() {
-    const hero = document.getElementById('homepage-hero') || document.querySelector('.hero');
-    if (!hero) return;
-
-    const candidates = [
-      'assets/gallery/hero-1.webp',
-      'assets/gallery/hero-1.jpg',
-      'assets/gallery/hero1.jpg',
-      'assets/gallery/photo1.jpg',
-      'assets/hero-school.jpg',
-      'assets/gallery/hero-1.svg',
-      'assets/hero-school.svg',
-      'https://images.unsplash.com/photo-1621312449992-7d6f6ca4b2b7?auto=format&fit=crop&w=1800&q=80'
-    ];
-
-    function imageExists(url) {
-      return new Promise(resolve => {
-        const img = new Image();
-        img.onload = () => resolve(true);
-        img.onerror = () => resolve(false);
-        img.src = url + (url.indexOf('?') === -1 ? '?_v=' + Date.now() : '&_v=' + Date.now());
-      });
-    }
-
-    (async function pickHero() {
-      for (const p of candidates) {
-        try {
-          if (await imageExists(p)) {
-            hero.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url("${p}")`;
-            hero.style.backgroundSize = 'cover';
-            hero.style.backgroundPosition = 'center';
-            return;
-          }
-        } catch (e) {
-          // ignore and try next
-        }
-      }
-      // no image found — leave existing CSS background
-    })();
-  })();
-</script>
 
 </body>
 </html>
