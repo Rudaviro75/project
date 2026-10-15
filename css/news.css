@@ -1,0 +1,119 @@
+/* =============================================
+   News & Events page – extra styles
+   Extends services.css (loaded first in HTML)
+   Colour rule: 60 % white · 30 % black · 10 % red
+   ============================================= */
+
+/* ---------- Tag badges ---------- */
+.tag {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 12px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  background: var(--black);
+  color: var(--white);
+}
+
+.tag-sport {
+  background: var(--red);
+}
+
+.tag-club {
+  background: #2e7d32;          /* green accent for clubs */
+}
+
+/* ---------- Date badge inside event cards ---------- */
+.event-card {
+  position: relative;
+  padding-left: 90px;
+  min-height: 120px;
+}
+
+.date-badge {
+  position: absolute;
+  left: 20px;
+  top: 24px;
+  width: 56px;
+  text-align: center;
+  line-height: 1.15;
+}
+
+.date-day {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--red);
+}
+
+.date-month {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+/* ---------- News list (stacked articles) ---------- */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.news-item {
+  background: var(--light);
+  border-left: 5px solid var(--black);
+  padding: 28px 28px 20px;
+  border-radius: 6px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.news-item:hover {
+  border-left-color: var(--red);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3 {
+  margin: 10px 0 8px;
+  font-size: 1.15rem;
+}
+
+.news-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.news-meta time {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 600;
+}
+
+.news-meta .tag {
+  margin-top: 0;              /* override default top margin inside meta row */
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+  .event-card {
+    padding-left: 24px;
+    padding-top: 80px;
+  }
+
+  .date-badge {
+    position: static;
+    display: flex;
+    gap: 6px;
+    margin-bottom: 8px;
+  }
+
+  .date-day {
+    font-size: 1.3rem;
+  }
+}
