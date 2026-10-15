@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#e6eef8"/>
+      <stop offset="100%" stop-color="#cfe6f6"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#g)"/>
+
+  <!-- Soft sun -->
+  <circle cx="1500" cy="150" r="120" fill="#fff9d9" opacity="0.9" />
+
+  <!-- School building -->
+  <g transform="translate(200,300)">
+    <rect x="0" y="180" width="1400" height="600" rx="18" ry="18" fill="#ffffff" stroke="#d1e6f8" stroke-width="6" />
+    <rect x="140" y="100" width="1120" height="120" rx="10" ry="10" fill="#f3f7fb" />
+
+    <!-- Roof -->
+    <polygon points="0,180 700,20 1400,180" fill="#d32f2f" opacity="0.95" />
+
+    <!-- Windows -->
+    <g fill="#dff1ff" stroke="#cdeaf8" stroke-width="4">
+      <!-- row 1 -->
+      <rect x="120" y="220" width="140" height="120" rx="6" />
+      <rect x="300" y="220" width="140" height="120" rx="6" />
+      <rect x="480" y="220" width="140" height="120" rx="6" />
+      <rect x="660" y="220" width="140" height="120" rx="6" />
+      <rect x="840" y="220" width="140" height="120" rx="6" />
+      <rect x="1020" y="220" width="140" height="120" rx="6" />
+      <rect x="1200" y="220" width="140" height="120" rx="6" />
+    </g>
+
+    <!-- Door -->
+    <rect x="760" y="420" width="120" height="360" rx="10" fill="#9ac8e6" stroke="#7fb6dc" stroke-width="4" />
+    <circle cx="860" cy="600" r="6" fill="#1a1a1a" />
+
+    <!-- Front steps -->
+    <rect x="680" y="780" width="280" height="40" fill="#e9f3fb" />
+    <rect x="650" y="820" width="340" height="30" fill="#f5f9fd" />
+
+    <!-- School name sign -->
+    <rect x="560" y="40" width="680" height="60" rx="8" fill="#ffffff" opacity="0.95" />
+    <text x="900" y="82" text-anchor="middle" font-family="Segoe UI, Tahoma, Geneva, Verdana, sans-serif" font-size="36" fill="#1a1a1a" font-weight="700">Book High School</text>
+  </g>
+
+  <!-- Foreground trees -->
+  <g transform="translate(60,700) scale(0.9)">
+    <g transform="translate(0,-80)">
+      <ellipse cx="120" cy="200" rx="80" ry="60" fill="#9ad9a6" />
+      <rect x="100" y="220" width="40" height="140" fill="#7aa874" />
+    </g>
+
+    <g transform="translate(150,-40)">
+      <ellipse cx="120" cy="200" rx="90" ry="70" fill="#b2e0aa" />
+      <rect x="100" y="240" width="40" height="120" fill="#7aa874" />
+    </g>
+  </g>
+
+  <!-- Subtle overlay for readable text when used as background -->
+  <rect width="100%" height="100%" fill="black" opacity="0.12" />
+</svg>
