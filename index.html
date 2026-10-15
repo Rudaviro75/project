@@ -113,68 +113,6 @@
             color: var(--black);
         }
 
-        /* Contact Section */
-        .contact-section {
-            background-color: var(--black);
-            color: var(--white);
-            padding: 4rem 2rem;
-            border-top: 5px solid var(--red);
-        }
-
-        .contact-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .contact-info h2 {
-            color: var(--red);
-            margin-top: 0;
-        }
-
-        .contact-info p {
-            margin: 0.8rem 0;
-        }
-
-        /* Contact Form Controls */
-        .contact-form form {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-
-        .contact-form input, .contact-form textarea {
-            padding: 0.8rem;
-            border: 1px solid #444;
-            background-color: #222;
-            color: var(--white);
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-
-        .contact-form input:focus, .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--red);
-        }
-
-        .contact-form button {
-            background-color: var(--red);
-            color: var(--white);
-            border: none;
-            padding: 1rem;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background 0.3s;
-        }
-
-        .contact-form button:hover {
-            background-color: #b71c1c;
-        }
-
         /* Footer */
         footer {
             text-align: center;
@@ -193,9 +131,8 @@
         <div class="logo">Book High <span>School</span></div>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>       <!-- Fixed Capital 'A' to match your repository file -->
-            <li><a href="services.html">Services</a></li>   <!-- Links to Davie's services.html page -->
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
         </ul>
     </nav>
 
@@ -208,7 +145,7 @@
 
         <section class="container">
             <h2>Welcome to Book High School</h2>
-            <p>Located in the eastern suburb of Cranborne, Harare, Book High School is a premier Government day school dedicated to fostering academic excellence, technical mastery, and sporting dominance for young men. Operating from Form 1 through Form 6, we provide a structured path toward future success.</p>
+            <p>Located in the eastern suburb of Cranborne, Harare, Book High School is a premier Government day school dedicated to fostering academic excellence, technical mastery, and sporting achievement.</p>
             
             <div class="features-grid">
                 <div class="feature-card">
@@ -226,34 +163,6 @@
             </div>
         </section>
     </div>
-
-    <!-- CONTACT SECTION CONTENT -->
-    <section id="contact" class="contact-section">
-        <div class="contact-container">
-            
-            <div class="contact-info">
-                <h2>Contact Us</h2>
-                <p>Have questions about admissions or school activities? Reach out to our administrative team directly.</p>
-                <br>
-                <p>📍 <strong>Address:</strong> Arthur Davies Road, Cranborne, Harare (P.O. Box 100)</p>
-                <p>📧 <strong>Email:</strong> bookhighschool@gmail.com</p>
-                <p>📞 <strong>Headmaster (Mr. Chipangura):</strong> +263 71 276 3518 / +263 77 483 5657</p>
-                <p>📞 <strong>Bursar (Mrs. Chipango):</strong> +263 77 379 0479</p>
-                <p>📞 <strong>Sports Director (Mr. Samarai):</strong> +263 78 676 4608</p>
-            </div>
-
-            <div class="contact-form">
-                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message submitted successfully!');">
-                    <input type="text" placeholder="Your Name" required>
-                    <input type="email" placeholder="Your Email Address" required>
-                    <input type="text" placeholder="Subject" required>
-                    <textarea rows="5" placeholder="Write your message here..." required></textarea>
-                    <button type="submit">Submit Inquiry</button>
-                </form>
-            </div>
-
-        </div>
-    </section>
 
     <footer>
         &copy; 2026 Book High School. All Rights Reserved. Built for School Project Collaboration.
