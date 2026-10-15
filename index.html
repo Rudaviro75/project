@@ -8,20 +8,22 @@
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav aria-label="Main navigation">
-        <div class="logo">Book High <span>School</span></div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div id="site-header" aria-hidden="false"></div>
+    <script>
+      (async function(){
+        const placeholder = document.getElementById('site-header');
+        if(!placeholder) return;
+        try{
+          const res = await fetch('header.html', {cache: 'no-store'});
+          if(res.ok){
+            placeholder.innerHTML = await res.text();
+          }
+        }catch(e){ /* ignore */ }
+      })();
+    </script>
 
-    <!-- HOME SECTION CONTENT -->
     <main id="home">
-        <header class="hero">
+        <header class="hero" id="homepage-hero">
             <h1>Book High School</h1>
             <p class="motto">"Nitamur ad caelum" — Taking to the sky</p>
         </header>
@@ -53,7 +55,6 @@
         &copy; 2026 Book High School. All rights reserved.
     </footer>
 
-    <!-- Quick contact bar visible on every page -->
     <div class="contact-bar" role="contentinfo" aria-label="Quick contact information">
         <div class="contact-left">
             <div class="contact-item">
