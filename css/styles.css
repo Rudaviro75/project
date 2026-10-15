@@ -1,0 +1,115 @@
+/* Global design tokens */
+:root {
+  --red: #D32F2F;
+  --black: #1A1A1A;
+  --white: #FFFFFF;
+  --light-gray: #F5F5F5;
+  --contact-height: 64px;
+}
+
+/* Base */
+html, body {
+  margin: 0;
+  padding: 0 0 var(--contact-height);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--black);
+  background-color: var(--white);
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--black);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 4px solid var(--red);
+}
+nav .logo { color: var(--white); font-size: 1.4rem; font-weight: bold; }
+nav .logo span { color: var(--red); }
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.5rem; }
+nav ul li a { color: var(--white); text-decoration: none; font-weight: 500; transition: color 0.3s; }
+nav ul li a:hover { color: var(--red); }
+
+/* Hero / Welcome Banner */
+/* Prefer a local image at assets/hero-school.svg (SVG) or assets/hero-school.jpg; fallback to Unsplash */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('assets/hero-school.svg') no-repeat center center / cover;
+  background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1621312449992-7d6f6ca4b2b7?auto=format&fit=crop&w=1800&q=80');
+  color: var(--white);
+  text-align: center;
+  padding: 6rem 2rem;
+}
+.hero h1 { font-size: 3rem; margin-bottom: 0.5rem; letter-spacing: 1px; }
+.hero .motto { font-style: italic; font-size: 1.1rem; color: var(--light-gray); margin-bottom: 1.5rem; }
+
+/* Main container */
+.container { max-width: 1100px; margin: 0 auto; padding: 3rem 2rem; }
+
+/* Features grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.feature-card {
+  background-color: var(--light-gray);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-top: 4px solid var(--red);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+.feature-card h3 { margin-top: 0; color: var(--black); }
+
+/* Contact Bar */
+.contact-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--contact-height);
+  background: linear-gradient(90deg, var(--black), rgba(26,26,26,0.95));
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1.25rem;
+  z-index: 1100;
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.25);
+  font-size: 0.95rem;
+}
+.contact-left, .contact-right { display:flex; align-items:center; gap:1rem; }
+.contact-item { display:flex; flex-direction:column; line-height:1; }
+.contact-item .label { font-size:0.75rem; color:#cccccc; }
+.contact-item a { color:var(--white); text-decoration:none; font-weight:600; }
+.contact-cta { background: var(--red); color: var(--white); padding:0.6rem 1rem; border-radius:6px; font-weight:700; text-decoration:none; }
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #111;
+  color: #888;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  border-top: 1px solid #222;
+}
+
+/* Responsive tweaks */
+@media (max-width: 800px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero { padding: 5rem 1.25rem; }
+  nav { padding: 0.75rem 1rem; }
+  nav ul { gap: 1rem; }
+  .contact-bar { padding: 0 0.75rem; font-size:0.9rem; }
+}
+@media (max-width: 480px) {
+  .contact-bar { height:auto; flex-direction:column; align-items:stretch; padding:0.5rem; gap:0.5rem; }
+  .contact-left, .contact-right { width:100%; justify-content:space-between; }
+  body { padding-bottom: calc(var(--contact-height) + 20px); }
+}
