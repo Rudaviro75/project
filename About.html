@@ -4,25 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Book High School</title>
-  <link rel="stylesheet" href="services.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">Book <span class="accent-text">High</span></div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Navigation -->
+  <nav aria-label="Main navigation">
+    <div class="logo">Book High <span>School</span></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html" class="active">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
   <!-- Hero Section -->
-  <section class="about-hero">
+  <section class="hero about-hero" role="banner" aria-label="About hero">
     <div class="hero-content">
       <h1>Our History & Values</h1>
       <p>Building a foundation of excellence, discipline, and outstanding results.</p>
@@ -30,7 +28,7 @@
   </section>
 
   <!-- Main Content Cards -->
-  <main class="about-main">
+  <main class="container about-main">
     <section class="mission-vision">
       <div class="card">
         <span class="card-number">01</span>
@@ -51,14 +49,38 @@
     <div class="cta-content">
       <h2>Ready to join the Book High family?</h2>
       <p>Enrollment is currently open for the upcoming academic year.</p>
-      <a href="contact.html" class="btn-primary">Admissions 2026</a>
+      <a href="contact.html" class="contact-cta">Admissions 2026</a>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2026 Book High School. All rights reserved.</p>
   </footer>
+
+  <!-- Quick contact bar -->
+  <div class="contact-bar" role="contentinfo" aria-label="Quick contact information">
+    <div class="contact-left">
+      <div class="contact-item">
+        <span class="label">Phone</span>
+        <a href="tel:+263712345678">+263 71 234 5678</a>
+      </div>
+      <div class="contact-item">
+        <span class="label">Email</span>
+        <a href="mailto:info@bookhighschool.ac.zw">info@bookhighschool.ac.zw</a>
+      </div>
+      <div class="contact-item">
+        <span class="label">Address</span>
+        <span>Cranborne, Harare</span>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="contact-item">
+        <span class="label">Office Hours</span>
+        <span>Mon–Fri 08:00–16:00</span>
+      </div>
+      <a class="contact-cta" href="tel:+263712345678">Call Now</a>
+    </div>
+  </div>
 
 </body>
 </html>
