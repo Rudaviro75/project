@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book High School | Home & Contact</title>
+    <title>Book High School | Home</title>
     <style>
         /* Color Palette & Base Styles */
         :root {
@@ -188,26 +188,24 @@
 </head>
 <body>
 
-    <!-- Navigation Bar (Shared Across Site) -->
+    <!-- Fixed Shared Navigation Bar -->
     <nav>
         <div class="logo">Book High <span>School</span></div>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>       <!-- Fixed Capital 'A' to match your repository file -->
+            <li><a href="services.html">Services</a></li>   <!-- Links to Davie's services.html page -->
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- HOME SECTION -->
+    <!-- HOME SECTION CONTENT -->
     <div id="home">
-        <!-- Hero Header -->
         <header class="hero">
             <h1>Book High School</h1>
             <p class="motto">"Nitamur ad caelum" — Taking to the sky</p>
         </header>
 
-        <!-- Quick Introduction -->
         <section class="container">
             <h2>Welcome to Book High School</h2>
             <p>Located in the eastern suburb of Cranborne, Harare, Book High School is a premier Government day school dedicated to fostering academic excellence, technical mastery, and sporting dominance for young men. Operating from Form 1 through Form 6, we provide a structured path toward future success.</p>
@@ -215,7 +213,7 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <h3>Academic Excellence</h3>
-                    <p>Offering comprehensive O-Level and Advanced Level blocks with an optimal, low teacher-to-pupil ratio across roughly 500 students.</p>
+                    <p>Offering comprehensive O-Level and Advanced Level blocks with an optimal, low teacher-to-pupil ratio across approximately 500 students.</p>
                 </div>
                 <div class="feature-card">
                     <h3>Technical Foundations</h3>
@@ -223,17 +221,16 @@
                 </div>
                 <div class="feature-card">
                     <h3>Elite Athletics</h3>
-                    <p>Proudly competing against top-tier institutions in rugby, soccer, cricket, basketball, hockey, swimming, and more.</p>
+                    <p>Proudly competing against top-tier institutions like Prince Edward, St John's, Churchill, and Allan Wilson in rugby, soccer, cricket, basketball, hockey, and swimming.</p>
                 </div>
             </div>
         </section>
     </div>
 
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT SECTION CONTENT -->
     <section id="contact" class="contact-section">
         <div class="contact-container">
             
-            <!-- School Contact Directory -->
             <div class="contact-info">
                 <h2>Contact Us</h2>
                 <p>Have questions about admissions or school activities? Reach out to our administrative team directly.</p>
@@ -245,9 +242,8 @@
                 <p>📞 <strong>Sports Director (Mr. Samarai):</strong> +263 78 676 4608</p>
             </div>
 
-            <!-- Interactive Form -->
             <div class="contact-form">
-                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent successfully! (Demo)');">
+                <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Message submitted successfully!');">
                     <input type="text" placeholder="Your Name" required>
                     <input type="email" placeholder="Your Email Address" required>
                     <input type="text" placeholder="Subject" required>
@@ -259,7 +255,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         &copy; 2026 Book High School. All Rights Reserved. Built for School Project Collaboration.
     </footer>
