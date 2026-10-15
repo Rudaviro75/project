@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact | Book High School, Cranborne, Harare</title>
-  <link rel="stylesheet" href="services.css">
-  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <header class="navbar">
-    <a class="logo" href="index.html">Book High <span>School</span></a>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html" class="active">Contact</a>
-    </nav>
-  </header>
+  <!-- Navigation -->
+  <nav aria-label="Main navigation">
+    <div class="logo">Book High <span>School</span></div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
 
-  <section class="hero">
+  <section class="hero" role="banner" aria-label="Contact hero">
     <h1>Contact Us</h1>
     <p>We are a school of about 500 pupils in Cranborne, Harare, with a low teacher-pupil ratio, so every call and message is answered by someone who knows our pupils.</p>
   </section>
@@ -38,13 +38,13 @@
       <article class="card">
         <h3>Mrs Chipango</h3>
         <p class="role">Bursar: school fees and payments</p>
-        <p><a href="tel:+2637737904790">+263 773 79 04 790</a></p>
+        <p><a href="tel:+2637737904790">+263 77 379 04790</a></p>
       </article>
 
       <article class="card">
         <h3>Mr Samarai</h3>
         <p class="role">Sports Director: teams, fixtures and training</p>
-        <p><a href="tel:+263786764608">+263 786 764 608</a></p>
+        <p><a href="tel:+263786764608">+263 78 676 4608</a></p>
       </article>
 
     </div>
@@ -77,7 +77,7 @@
         <label for="message">Your message</label>
         <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit" class="btn">Send message</button>
+        <button type="submit" class="contact-cta">Send message</button>
       </form>
 
     </div>
@@ -86,6 +86,31 @@
   <footer class="footer">
     <p>&copy; 2026 Book High School, Cranborne, Harare</p>
   </footer>
+
+  <!-- Quick contact bar -->
+  <div class="contact-bar" role="contentinfo" aria-label="Quick contact information">
+    <div class="contact-left">
+      <div class="contact-item">
+        <span class="label">Phone</span>
+        <a href="tel:+263712345678">+263 71 234 5678</a>
+      </div>
+      <div class="contact-item">
+        <span class="label">Email</span>
+        <a href="mailto:info@bookhighschool.ac.zw">info@bookhighschool.ac.zw</a>
+      </div>
+      <div class="contact-item">
+        <span class="label">Address</span>
+        <span>Cranborne, Harare</span>
+      </div>
+    </div>
+    <div class="contact-right">
+      <div class="contact-item">
+        <span class="label">Office Hours</span>
+        <span>Mon–Fri 08:00–16:00</span>
+      </div>
+      <a class="contact-cta" href="tel:+263712345678">Call Now</a>
+    </div>
+  </div>
 
 </body>
 </html>
